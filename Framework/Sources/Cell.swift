@@ -98,7 +98,7 @@ open class Cell: UIView {
 }
 
 extension Cell: Comparable {
-    public static func <(lhs: Cell, rhs: Cell) -> Bool {
+    @MainActor public static func <(lhs: Cell, rhs: Cell) -> Bool {
         return lhs.indexPath < rhs.indexPath
     }
 }
